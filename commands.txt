@@ -1,0 +1,50 @@
+1. git status
+show modified files in working directory, staged for your next commit
+
+2. git add [file]
+add a file as it looks now to your next commit (stage)
+
+Ex: git add details.txt
+
+3. git reset [file]
+unstage a file while retaining the changes in working directory
+
+Ex: git reset details.txt
+4. git diff
+
+diff of what is changed but not staged
+
+Ex : git diff main Shuab
+
+5. git branch
+list your branches.
+
+6. git init
+initialize an existing directory as a Git repository
+
+7. git clone [url]
+retrieve an entire repository from a hosted location via URL
+
+8. git branch [branch-name]
+create a new branch at the current commit
+
+9. git checkout
+switch to another branch and check it out into your working directory
+
+10. git merge [branch]
+merge the specified branch’s history into the current one
+
+11. git log
+show all commits in the current branch’s history
+
+12. git log branchB..branchA
+show the commits on branchA that are not on branchB
+
+13. git log --follow [file]
+show the commits that changed file, even across renames
+
+14. git diff branchB...branchA
+show the diff of what is in branchA that is not in branchB
+
+15. git remote add [alias] [url]
+add a git URL as an alias
