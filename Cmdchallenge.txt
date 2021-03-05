@@ -1,0 +1,63 @@
+1. Q :Your first challenge is to print "hello world" on the terminal in a single command.
+ans: root@kiran:~# echo hello,world
+     hello,world
+     root@kiran:~# 
+
+2. Q : Print the current working directory.
+ans: pwd
+
+3. Q : List names of all the files in the current directory, one file per line.
+ans: ls
+
+4. Q :There is a file named access.log in the current directory. Print the contents.
+ans: cat access.log
+ 
+5. Q : Print the last 5 lines of "access.log"
+ans:  tail -5 access.log
+
+6. Q : There is a file named “access.log” in the current working directory. Print all lines in this file that contains the string “GET”.
+ans: grep ‘GET’ ./access.log
+
+7. Q : Create an empty file named take-the-command-challenge in the current working directory.
+ans: touch take-the-command-challenge
+
+8.Q :  Create a directory named tmp/files in the current working directory
+ans: mkdir tmp && cd tmp && mkdir files && cd files
+
+9.Q :  Copy the file named take-the-command-challenge to the directory tmp/files
+ans: cp -r take-the-command-challenge tmp/files/
+
+10. Q : Move the file named take-the-command-challenge to the directory tmp/files
+ans: mv take-the-command-challenge cd tmp/files
+
+11. Q : A symbolic link is a type of file that is a reference to another file.
+Create a symbolic link named take-the-command-challenge that points to the file tmp/files/take-the-command-challenge.
+ans: ln -s -v tmp/files/take-the-command-challenge take-the-command-challenge
+
+12. Q : Delete all of the files in this challenge directory including all subdirectories and their contents.
+ans: rm -Rf .* *
+
+13. Q : There are files in this challenge with different file extensions. Remove all files with the .doc extension recursively in the current working directory.
+ans: find . -name "*.doc" -delete
+
+14. Q : There is a file named access.log in the current working directory. Print all lines in this file that contains the string "GET".
+ans: grep -i get access.log
+
+15. Q : Print all files in the current directory, one per line (not the path, just the filename) that contain the string "500".
+ans: grep -Rl "500"
+
+16. Q : Print the relative file paths, one path per line for all filenames that start with "access.log" in the current directory.
+ans: ls -r access*
+
+17. Q : Print all matching lines (without the filename or the file path) in all files under the current directory that start with "access.log" that contain the string "500".
+Note that there are no files named access.log in the current directory, you will need to search recursively.
+ans: find . -name "access.log*" | xargs grep -h 500 
+
+18. Q : Extract all IP addresses from files that start with "access.log" printing one IP address per line.
+ans: grep -ro ^[0-9.]*
+
+19. Q : Count the number of files in the current working directory. Print the number of files as a single integer.
+ans: ls -o|wc -l
+
+20. Q : Print the contents of access.log sorted.
+ans : sort access*
